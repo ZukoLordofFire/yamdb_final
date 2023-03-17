@@ -1,28 +1,24 @@
-from rest_framework import viewsets, filters, mixins, status
+from api.filters import TitleFilter
+from api.permissions import (IsAdmin, IsAdminOrReadOnly,
+                             IsAuthorModeratorAdminOrReadOnly)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             SignUpSerializer, TitleCreateSerializer,
+                             TitleListSerializer, TokenSerializer,
+                             UserRestrictedSerializer, UserSerializer)
+from django.contrib.auth.tokens import default_token_generator
+from django.core.mail import send_mail
+from django.db.models import Avg
+from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, mixins, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
-from django.core.mail import send_mail
 from rest_framework.views import APIView
-from django.db.models import Avg
-from django_filters.rest_framework import DjangoFilterBackend
-from django.contrib.auth.tokens import default_token_generator
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from reviews.models import Genre, Category, Title, Review, Comment
-from api.filters import TitleFilter
-from api.serializers import (GenreSerializer, CategorySerializer,
-                             ReviewSerializer,
-                             TitleCreateSerializer, TitleListSerializer,
-                             CommentSerializer,
-                             TokenSerializer,
-                             UserSerializer,
-                             SignUpSerializer,
-                             UserRestrictedSerializer)
-from api.permissions import (IsAdminOrReadOnly, IsAdmin,
-                             IsAuthorModeratorAdminOrReadOnly)
+from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
 
 

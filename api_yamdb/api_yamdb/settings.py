@@ -1,8 +1,8 @@
 import os
-from pathlib import Path
 from datetime import timedelta
-from django.conf.global_settings import DATETIME_INPUT_FORMATS
+from pathlib import Path
 
+from django.conf.global_settings import DATETIME_INPUT_FORMATS
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
