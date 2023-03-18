@@ -9,7 +9,8 @@ services:
       - ./.env
   web:
     build:
-      dockerfile: ./api_yamdb/
+      context: ./api_yamdb/
+      dockerfile: Dockerfile
     image: zukosithlord/yamdb_final:latest
     restart: always
     volumes:
