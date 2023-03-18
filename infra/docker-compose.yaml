@@ -9,7 +9,7 @@ services:
       - ./.env
   web:
     build:
-      dockerfile: .
+      dockerfile:
     image: zukosithlord/yamdb_final:latest
     restart: always
     volumes:
