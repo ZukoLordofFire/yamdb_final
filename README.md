@@ -11,7 +11,7 @@
 ## Технологии
 [![My Skills](https://skillicons.dev/icons?i=python,django,sqlite,bootstrap&theme=light)](https://skillicons.dev)
 
-![Workflow](https://github.com/zukolordoffire/yamdb_final/actions/workflows/main.yml/badge.svg)
+![Workflow](https://github.com/ZukoLordofFire/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## Наполнение env файла
 DB_ENGINE=django.db.backends.postgresql
