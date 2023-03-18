@@ -164,7 +164,13 @@ SIMPLE_JWT = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
+EMAIL_HOST = 'smpt.tempmail.us.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'dtiodejiiredymy@tempmail.us.com'
+EMAIL_HOST_PASSWORD = 'password'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = False
+EMAIL_TIMEOUT = 5
 
 DATETIME_INPUT_FORMATS += ('%Y-%m-%dT%H:%M:%S.567z', )
 DATETIME_INPUT_FORMATS += ('%Y-%m-%dT%H:%M:%S.422z', )
