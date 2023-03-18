@@ -163,7 +163,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
 DATETIME_INPUT_FORMATS += ('%Y-%m-%dT%H:%M:%S.567z', )
