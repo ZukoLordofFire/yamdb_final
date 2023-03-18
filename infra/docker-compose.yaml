@@ -9,7 +9,6 @@ services:
       - ./.env
   web:
     build:
-      context: api_yamdb
       dockerfile: .
     image: zukosithlord/yamdb_final:latest
     restart: always
