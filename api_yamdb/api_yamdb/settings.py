@@ -3,11 +3,9 @@ from datetime import timedelta
 from pathlib import Path
 
 from django.conf.global_settings import DATETIME_INPUT_FORMATS
-from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY', default='p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs')
