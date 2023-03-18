@@ -10,7 +10,7 @@ services:
   web:
     build:
       context: api_yamdb
-      dockerfile: ./
+      dockerfile: .
     image: zukosithlord/yamdb_final:latest
     restart: always
     volumes:
